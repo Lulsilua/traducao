@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC HUB</title>
+    <link rel="stylesheet" href="../styles/styles.css"> <!-- Link to external CSS -->
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>PC HUB</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquise por produtos...">
+                <button>Buscar</button>
+            </div>
+            <div class="cart-icon" onclick="openCart()">
+                🛒 Carrinho (<span id="cartCount">0</span>)
+            </div>
+        </nav>
+
+        <!-- Horizontal Navigation Menu Below the Search Bar -->
+        <div class="navigation-menu">
+            <ul>
+                <li><a href="shop.html">Loja</a></li>
+                <li><a href="shop.html">Ofertas</a></li>
+                <li><a href="contact.html">Atendimento ao Cliente</a></li>
+                <li><a href="about.html">Sobre nós</a></li>
+                <li><a href="contact.html">Contate-nos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Slider Section -->
+    <div class="slider">
+        <div class="slides">
+            <img src="../resources/slider1.jpeg" alt="Slide 1">
+            <img src="../resources/slider2.jpeg" alt="Slide 2">
+            <img src="../resources/slider3.jpeg" alt="Slide 3">
+            <img src="../resources/slider4.jpeg" alt="Slide 4">
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="main-content">
+        <!-- Sidebar Categories -->
+        <aside class="sidebar">
+            <h2>Categorias</h2>
+            <ul>
+                <li><a href="#">Teclados</a></li>
+                <li><a href="#">Mouses</a></li>
+                <li><a href="#">Headsets</a></li>
+                <li><a href="#">Monitores</a></li>
+                <li><a href="#">Acessórios</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Listing -->
+        <section class="products">
+            <div class="product-card">
+                <img src="../resources/teclado-mecanico1.jpeg" alt="Teclado Mecânico">
+                <h3>Teclado Mecânico</h3>
+                <p>Durável e responsivo para gamers e profissionais.</p>
+                <p class="price">R$129,99</p>
+                <button onclick="addToCart(this, 'Teclado Mecânico', 129.99)">Adicionar ao Carrinho</button>
+                <p class="review">⭐⭐⭐⭐⭐ (200 avaliações)</p>
+            </div>
+            <div class="product-card">
+                <img src="../resources/mouse1.jpeg" alt="Mouse Gamer">
+                <h3>Mouse Gamer</h3>
+                <p>Alta precisão com botões personalizáveis.</p>
+                <p class="price">R$49,99</p>
+                <button onclick="addToCart(this, 'Mouse Gamer', 49.99)">Adicionar ao Carrinho</button>
+                <p class="review">⭐⭐⭐⭐ (150 avaliações)</p>
+            </div>
+            <div class="product-card">
+                <img src="../resources/headset1.jpeg" alt="Headset Gamer">
+                <h3>Headset Gamer</h3>
+                <p>Som imersivo com microfone com cancelamento de ruído.</p>
+                <p class="price">R$89,99</p>
+                <button onclick="addToCart(this, 'Headset Gamer', 89.99)">Adicionar ao Carrinho</button>
+                <p class="review">⭐⭐⭐⭐⭐ (180 avaliações)</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="see-more">
+        <button onclick="location.href='../pages/shop.html'">Ver Mais Produtos</button>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeCart()">&#10005;</button> <!-- Close Button -->
+            <div class="product-list">
+                <ul id="cartItems"></ul>
+            </div>
+            <div class="summary">
+                <h2>Resumo</h2>
+                <p id="subtotal">Subtotal: R$0,00</p>
+                <p id="tax">Imposto: R$0,00</p>
+                <p id="delivery">Entrega: R$5,00</p>
+                <p class="total" id="total">Total: R$5,00</p>
+                <button id="checkoutButton" onclick="proceedToCheckout()">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Message -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 PC HUB - Todos os Direitos Reservados</p>
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Serviço</a>
+            <a href="#">Contate-nos</a>
+        </div>
+    </footer>
+
+    <script src="../scripts/index.js"></script> <!-- Link to external JavaScript -->
+</body>
+
+</html>

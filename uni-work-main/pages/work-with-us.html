@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC HUB - Trabalhe Conosco</title>
+    <link rel="stylesheet" href="../styles/work-with-us.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Trabalhe Conosco</h1>
+    </header>
+
+    <form id="jobApplicationForm">
+        <h2>Candidatar-se para Juntar-se à Nossa Equipe</h2>
+        <p class="error" id="error"></p>
+        
+        <label for="fullName">Nome Completo:</label>
+        <input type="text" id="fullName" placeholder="Seu nome completo" required>
+
+        <label for="email">Endereço de E-mail:</label>
+        <input type="email" id="email" placeholder="Seu endereço de e-mail" required>
+
+        <label for="phone">Número de Telefone:</label>
+        <input type="tel" id="phone" placeholder="Seu número de telefone" required>
+
+        <label for="position">Cargo para o qual está se Candidando:</label>
+        <input type="text" id="position" placeholder="Cargo que está se candidatando" required>
+
+        <label for="experience">Experiência Profissional (Resumo Breve):</label>
+        <textarea id="experience" placeholder="Descreva sua experiência" rows="4" required></textarea>
+
+        <label for="linkedin">Perfil do LinkedIn (opcional):</label>
+        <input type="url" id="linkedin" placeholder="URL do perfil do LinkedIn">
+
+        <button type="submit">Enviar Candidatura</button>
+    </form>
+
+    <!-- Return to About Page Button -->
+    <button id="returnButton" onclick="returnToAbout()">Retornar à Página Sobre</button>
+
+    <script src="../scripts/work-with-us.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC HUB - Loja</title>
+    <link rel="stylesheet" href="../styles/shop.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PC HUB - Loja</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="shop.html">Loja</a>
+            <a href="about.html">Sobre</a>
+            <a href="contact.html">Contato</a>
+        </nav>
+        <div class="cart-icon" onclick="openCart()">
+            🛒 Carrinho (<span id="cartCount">0</span>)
+        </div>
+    </header>
+
+    <!-- Main content container -->
+    <div class="content-container">
+
+        <!-- Sidebar Filter -->
+        <div class="sidebar">
+            <h3>Filtrar por</h3>
+
+            <div class="filter-group">
+                <h3>Preço</h3>
+                <label for="priceRange">Até R$<span id="priceValue">1000</span></label>
+                <input type="range" id="priceRange" min="0" max="2000" step="10" value="2000">
+            </div>
+
+            <div class="filter-group">
+                <h3>Marca</h3>
+                <label>
+                    <input type="checkbox" id="brandA" value="Brand A"> Marca A
+                </label>
+                <label>
+                    <input type="checkbox" id="brandB" value="Brand B"> Marca B
+                </label>
+            </div>
+
+            <button type="button" id="applyFilters">Aplicar Filtros</button>
+        </div>
+
+        <!-- Main Product List -->
+        <div class="products" id="productList">
+            <!-- Products will be dynamically inserted here -->
+        </div>
+
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal">
+        <div class="modal-content">
+            <div class="product-list">
+                <ul id="cartItems"></ul>
+            </div>
+            <div class="summary">
+                <h2>Resumo</h2>
+                <p id="subtotal">Subtotal: R$0.00</p>
+                <p id="tax">Imposto: R$0.00</p>
+                <p id="delivery">Entrega: R$5.00</p>
+                <p class="total" id="total">Total: R$5.00</p>
+                <button id="checkoutButton" onclick="checkout()">Finalizar Compra</button>
+                <div class="store-policy">
+                    <p>Política da Loja: Pedro é uma ótima pessoa. Ele é justo, honesto e sempre tenta oferecer a melhor experiência possível. Confie no serviço do Pedro para todas as suas necessidades de periféricos!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Message -->
+    <div id="notification" class="notification"></div>
+
+    <script src="../scripts/shop.js"></script>
+
+</body>
+
+</html>

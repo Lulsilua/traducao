@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - PC HUB</title>
+    <link rel="stylesheet" href="../styles/checkout.css">
+</head>
+
+<body>
+
+    <div class="checkout-container">
+        <h1>Finalizar Compra</h1>
+        <div class="checkout-details">
+            <!-- Product Summary -->
+            <div class="product-summary" id="productSummary">
+                <h3>Seu Pedido</h3>
+                <ul id="productList">
+                    <!-- Product items will be dynamically inserted here -->
+                </ul>
+                <div class="total-price">
+                    <h4>Total: <span id="totalPrice">R$0,00</span></h4>
+                </div>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="payment-section">
+                <h3>Detalhes do Pagamento</h3>
+                <input type="text" placeholder="Nome do Titular do Cartão" required>
+                <input type="text" placeholder="Número do Cartão" maxlength="16" required>
+                <input type="text" placeholder="Data de Validade (MM/AA)" maxlength="5" required>
+                <input type="text" placeholder="CVC" maxlength="3" required>
+                <input type="email" id="emailInput" placeholder="Email para Recibo" required>
+                <button onclick="pay()">Pagar</button>
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <h2>Compra Realizada com Sucesso!</h2>
+            <p>Um recibo e mais informações foram enviados para <span id="customerEmail"></span>. Obrigado pelo seu pedido!</p>
+            <button onclick="returnToStore()">Voltar à Loja</button>
+        </div>
+    </div>
+
+    <script src="../scripts/checkout.js"></script>
+
+</body>
+
+</html>
